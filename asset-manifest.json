@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/rematrackerv2/static/css/main.f5425028.css",
+    "main.js": "/rematrackerv2/static/js/main.647e135a.js",
+    "static/media/rema1000logo.png": "/rematrackerv2/static/media/rema1000logo.4099f611a3f474047e2f.png",
+    "static/media/remalogo.png": "/rematrackerv2/static/media/remalogo.96170000458655688279.png",
+    "index.html": "/rematrackerv2/index.html",
+    "main.f5425028.css.map": "/rematrackerv2/static/css/main.f5425028.css.map",
+    "main.647e135a.js.map": "/rematrackerv2/static/js/main.647e135a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f5425028.css",
+    "static/js/main.647e135a.js"
+  ]
+}
