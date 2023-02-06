@@ -1,4 +1,4 @@
-import { Button, Card } from '@mui/material';
+import { Card } from '@mui/material';
 import { Box } from '@mui/system';
 import './DiscountCard.css';
 import { getProductLink } from './helpers';

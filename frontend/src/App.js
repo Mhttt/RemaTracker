@@ -1,6 +1,5 @@
 import './App.css';
 import logo from './public/remalogo.png';
-import logo1 from './public/rema1000logo.png';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import DiscountCard from './components/DiscountCard/DiscountCard';
@@ -9,8 +8,7 @@ import { Grid, Pagination, Box, InputBase } from '@mui/material';
 function App() {
 	const [allProducts, setAllProducts] = useState([]);
 	const [shownProducts, setShownProducts] = useState([]);
-	const [pageNum, setPageNum] = useState(1);
-	const [newsPerPage, setNewsPerPage] = useState(24);
+	const [newsPerPage] = useState(24);
 
 	function fetchData() {
 		try {
@@ -40,7 +38,7 @@ function App() {
 
 	useEffect(() => {
 		fetchData();
-	}, []);
+	}, );
 
 	return (
 		<div>
