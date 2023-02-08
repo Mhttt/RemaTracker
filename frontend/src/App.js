@@ -1,5 +1,7 @@
 import './App.css';
 import logo from './public/remalogo.png';
+import homer from './public/HomerSimpson.png';
+import eye from './public/eye.png';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import DiscountCard from './components/DiscountCard/DiscountCard';
@@ -85,6 +87,12 @@ function App() {
           );
         })}
       </Grid>
+      <div className="homer">
+        <img src={homer} alt="homer" width={'300px'}></img>
+        <img className="eye1" src={eye}></img>
+        <img className="eye2" src={eye}></img>
+      </div>
+
       <Box className="pagination-container">
         <Pagination
           className="pagination"

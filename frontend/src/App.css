@@ -1,36 +1,41 @@
 .header {
-	display: flex;
-	flex-direction: column;
-	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(30,77,142,1) 0%, rgba(0,212,255,1) 100%);
-	position: fixed;
-	align-items: center;
-	top: 0;
-	right: 0;
-	left: 0;
-	z-index: 200;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(30, 77, 142, 1) 0%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  position: fixed;
+  align-items: center;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 200;
 }
 
 .title {
-	color: white;
-	margin-bottom: 10px;
+  color: white;
+  margin-bottom: 10px;
   font-size: 50px;
 }
 
 .headerMenu {
-	display: flex;
-	min-width: 700px;
-	justify-content: space-between;
-	margin-bottom: 30px;
+  display: flex;
+  min-width: 700px;
+  justify-content: space-between;
+  margin-bottom: 30px;
 }
 
 .headerLink {
-	color: white;
+  color: white;
   text-decoration: none;
   font-size: 20px;
   font-weight: bold;
 }
 
-.search-field{
+.search-field {
   color: white;
   width: 400px;
   padding: 10px 100px 10px 10px;
@@ -45,4 +50,22 @@
   justify-content: center;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+.homer {
+  position: relative;
+  width: 300px;
+  background-color: red;
+}
+
+.eye1 {
+  position: absolute;
+  width: 20px;
+  top: 70px;
+	left: 102px;
+}
+
+.eye2 {
+  position: absolute;
+  width: 20px;
 }
