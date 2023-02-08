@@ -2,7 +2,7 @@ const axios = require('axios');
 const express = require('express');
 const cors = require("cors");
 
-const PORT = process.env.PORT || 5050;
+const PORT = process.env.PORT || 6000;
 const app = express();
 app.use(
 	cors({
@@ -16,9 +16,7 @@ axios
 	.post(
 		'https://flwdn2189e-dsn.algolia.net/1/indexes/*/queries?x-algolia-agent=Algolia%20for%20vanilla%20JavaScript%203.21.1&x-algolia-application-id=FLWDN2189E&x-algolia-api-key=91ff119df3e6ee7aee99ae097fd41309',
 		{
-      Headers:{
-        "Access-Control-Allow-Origin": "*",
-      },
+      
 			requests: [
 				{
 					indexName: 'aws-prod-products',

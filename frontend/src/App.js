@@ -21,7 +21,6 @@ function App() {
 		}
 	}
 
-	console.log(allProducts);
 
 	function calcPagination(products = undefined, pageNum) {
 		const useProducts = products !== undefined ? products : allProducts;
@@ -38,7 +37,7 @@ function App() {
 
 	useEffect(() => {
 		fetchData();
-	}, );
+	}, []);
 
 	return (
 		<div>
