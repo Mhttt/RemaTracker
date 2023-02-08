@@ -23,7 +23,7 @@ function DiscountCard(props) {
 					alt={props.productName}
 				></img>
 				<img className="logo" src={props.productLogo} alt="rema1000"></img>
-				<h3>{props.productName}</h3>
+				<h3 className="product-name">{props.productName}</h3>
 				<p>{props.productDescription}</p>
 				{productIsOnDiscount > 0 ? (
 					<Box className="price-container">
