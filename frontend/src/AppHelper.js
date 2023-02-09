@@ -1,13 +1,13 @@
 export function calculateEyes(event) {
+  const anchor = document.getElementsByClassName('homer');
+  const rekt = anchor[0].getBoundingClientRect();
+  const anchorX = rekt.left + rekt.width / 2;
+  const anchorY = rekt.top + rekt.height / 2;
+
   document.addEventListener('mousemove', (e) => {
     
     const mouseX = e.clientX;
     const mouseY = e.clientY;
-
-    const anchor = document.getElementsByClassName('homer');
-    const rekt = anchor[0].getBoundingClientRect();
-    const anchorX = rekt.left + rekt.width / 2;
-    const anchorY = rekt.top + rekt.height / 2;
 
     const angleDeg = angle(mouseX, mouseY, anchorX, anchorY);
 

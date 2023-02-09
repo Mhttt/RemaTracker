@@ -74,3 +74,12 @@
   left: 47px;
   border-radius: 15px;
 }
+
+.homerLogo {
+  position: absolute;
+  width: 38px;
+  z-index: 200;
+  top: 78px;
+  left: 40px;
+  transform: rotate(350deg);
+}

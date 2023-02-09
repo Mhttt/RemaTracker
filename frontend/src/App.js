@@ -92,8 +92,9 @@ function App() {
       </Grid>
       <div className="homer">
         <img src={homer} alt="homer" width={'100px'}></img>
-        <img className="eye1 eye" src={eye}></img>
-        <img className="eye2 eye" src={eye}></img>
+        <img className="eye1 eye" src={eye} alt='eye'></img>
+        <img className="eye2 eye" src={eye} alt='eye'></img>
+        <img className='homerLogo' src={logo} alt='rema1000'></img>
       </div>
 
       <Box className="pagination-container">
