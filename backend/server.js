@@ -112,11 +112,6 @@ axios
 
 app.get('/api/products', (req, res) => {
   res.send(allProducts);
-  res.writeHead(200, {
-    'Content-Type': 'text/plain',
-    'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE',
-  });
 });
 
 app.listen(PORT, () => console.log(`Server is listening on port ${PORT}`));
