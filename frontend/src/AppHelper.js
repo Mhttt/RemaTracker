@@ -1,11 +1,11 @@
-export function calculateEyes(event) {
-  const anchor = document.getElementsByClassName('homer');
-  const rekt = anchor[0].getBoundingClientRect();
-  const anchorX = rekt.left + rekt.width / 2;
-  const anchorY = rekt.top + rekt.height / 2;
+const anchor = document.getElementsByClassName('homer');
 
+export function calculateEyes(event) {
   document.addEventListener('mousemove', (e) => {
-    
+    const rekt = anchor[0].getBoundingClientRect();
+    const anchorX = rekt.left + rekt.width / 2;
+    const anchorY = rekt.top + rekt.height / 2;
+
     const mouseX = e.clientX;
     const mouseY = e.clientY;
 
@@ -16,7 +16,6 @@ export function calculateEyes(event) {
       eye.style.transform = `rotate(${90 + angleDeg}deg)`;
     });
   });
-
 }
 
 function angle(cx, cy, ex, ey) {
