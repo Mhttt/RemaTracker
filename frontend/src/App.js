@@ -12,6 +12,10 @@ function App() {
   const [shownProducts, setShownProducts] = useState([]);
   const [newsPerPage] = useState(24);
 
+  useEffect(() => {
+    fetchData();
+  }, []);
+
   function fetchData() {
     try {
       axios.get('https://rematracker.onrender.com/api/products').then((res) => {
@@ -21,6 +25,34 @@ function App() {
     } catch (error) {
       console.error(error);
     }
+  }
+
+  document.addEventListener('mousemove', (e) => {
+    console.log(e);
+    const mouseX = e.clientX;
+    const mouseY = e.clientY;
+
+    const anchor = document.getElementsByClassName('homer');
+    const rekt = anchor[0].getBoundingClientRect();
+    const anchorX = rekt.left + rekt.width / 2;
+    const anchorY = rekt.top + rekt.height / 2;
+
+    const angleDeg = angle(mouseX, mouseY, anchorX, anchorY);
+
+    console.log(angleDeg);
+
+    const eyes = document.querySelectorAll('.eye');
+    eyes.forEach((eye) => {
+      eye.style.transform = `rotate(${90 + angleDeg}deg)`;
+    });
+  });
+
+  function angle(cx, cy, ex, ey) {
+    const dy = ey - cy;
+    const dx = ex - cx;
+    const rad = Math.atan2(dy, dx);
+    const deg = (rad * 180) / Math.PI;
+    return deg;
   }
 
   function calcPagination(products = undefined, pageNum) {
@@ -35,10 +67,6 @@ function App() {
   const handleChange = (event, value) => {
     calcPagination(undefined, value);
   };
-
-  useEffect(() => {
-    fetchData();
-  }, []);
 
   return (
     <div>
@@ -88,9 +116,9 @@ function App() {
         })}
       </Grid>
       <div className="homer">
-        <img src={homer} alt="homer" width={'300px'}></img>
-        <img className="eye1" src={eye}></img>
-        <img className="eye2" src={eye}></img>
+        <img src={homer} alt="homer" width={'100px'}></img>
+        <img className="eye1 eye" src={eye}></img>
+        <img className="eye2 eye" src={eye}></img>
       </div>
 
       <Box className="pagination-container">

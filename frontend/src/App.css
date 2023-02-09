@@ -53,19 +53,24 @@
 }
 
 .homer {
-  position: relative;
-  width: 300px;
-  background-color: red;
+  position: fixed;
+  width: 100px;
+  bottom: -20px;
+  z-index: 300;
 }
 
 .eye1 {
   position: absolute;
-  width: 20px;
-  top: 70px;
-	left: 102px;
+  width: 8px;
+  top: 22px;
+  left: 35px;
+  border-radius: 4px;
 }
 
 .eye2 {
   position: absolute;
-  width: 20px;
+  width: 7px;
+  top: 20px;
+  left: 47px;
+  border-radius: 15px;
 }
