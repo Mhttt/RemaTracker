@@ -2,6 +2,7 @@ import './App.css';
 import logo from './public/remalogo.png';
 import homer from './public/HomerSimpson.png';
 import eye from './public/eye.png';
+import { calculateEyes } from './AppHelper';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import DiscountCard from './components/DiscountCard/DiscountCard';
@@ -27,33 +28,7 @@ function App() {
     }
   }
 
-  document.addEventListener('mousemove', (e) => {
-    console.log(e);
-    const mouseX = e.clientX;
-    const mouseY = e.clientY;
-
-    const anchor = document.getElementsByClassName('homer');
-    const rekt = anchor[0].getBoundingClientRect();
-    const anchorX = rekt.left + rekt.width / 2;
-    const anchorY = rekt.top + rekt.height / 2;
-
-    const angleDeg = angle(mouseX, mouseY, anchorX, anchorY);
-
-    console.log(angleDeg);
-
-    const eyes = document.querySelectorAll('.eye');
-    eyes.forEach((eye) => {
-      eye.style.transform = `rotate(${90 + angleDeg}deg)`;
-    });
-  });
-
-  function angle(cx, cy, ex, ey) {
-    const dy = ey - cy;
-    const dx = ex - cx;
-    const rad = Math.atan2(dy, dx);
-    const deg = (rad * 180) / Math.PI;
-    return deg;
-  }
+  calculateEyes();
 
   function calcPagination(products = undefined, pageNum) {
     const useProducts = products !== undefined ? products : allProducts;
