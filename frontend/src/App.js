@@ -1,5 +1,8 @@
 import './App.css';
 import logo from './public/remalogo.png';
+import homer from './public/HomerSimpson.png';
+import eye from './public/eye.png';
+import { calculateEyes } from './AppHelper';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import DiscountCard from './components/DiscountCard/DiscountCard';
@@ -9,6 +12,10 @@ function App() {
   const [allProducts, setAllProducts] = useState([]);
   const [shownProducts, setShownProducts] = useState([]);
   const [newsPerPage] = useState(24);
+
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   function fetchData() {
     try {
@@ -20,6 +27,8 @@ function App() {
       console.error(error);
     }
   }
+
+  calculateEyes();
 
   function calcPagination(products = undefined, pageNum) {
     const useProducts = products !== undefined ? products : allProducts;
@@ -33,10 +42,6 @@ function App() {
   const handleChange = (event, value) => {
     calcPagination(undefined, value);
   };
-
-  useEffect(() => {
-    fetchData();
-  }, []);
 
   return (
     <div>
@@ -85,6 +90,12 @@ function App() {
           );
         })}
       </Grid>
+      <div className="homer">
+        <img src={homer} alt="homer" width={'100px'}></img>
+        <img className="eye1 eye" src={eye}></img>
+        <img className="eye2 eye" src={eye}></img>
+      </div>
+
       <Box className="pagination-container">
         <Pagination
           className="pagination"

@@ -1,7 +1,7 @@
 import { Card } from '@mui/material';
 import { Box } from '@mui/system';
 import './DiscountCard.css';
-import { getProductLink } from './helpers';
+import { getProductLink } from './DiscountHelpers';
 
 function DiscountCard(props) {
 	const productIsOnDiscount = props.productOldPrice - props.productPrice; //If bigger than 0 product is on discount
