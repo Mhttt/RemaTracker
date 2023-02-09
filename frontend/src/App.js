@@ -34,10 +34,8 @@ function App() {
     const useProducts = products !== undefined ? products : allProducts;
     const startIndex = newsPerPage * (pageNum - 1);
     const endIndex = newsPerPage * pageNum;
-    console.log(startIndex, endIndex);
     setShownProducts(useProducts.slice(startIndex, endIndex));
   }
-  console.log(shownProducts);
 
   const handleChange = (event, value) => {
     calcPagination(undefined, value);
@@ -92,9 +90,9 @@ function App() {
       </Grid>
       <div className="homer">
         <img src={homer} alt="homer" width={'100px'}></img>
-        <img className="eye1 eye" src={eye} alt='eye'></img>
-        <img className="eye2 eye" src={eye} alt='eye'></img>
-        <img className='homerLogo' src={logo} alt='rema1000'></img>
+        <img className="eye1 eye" src={eye} alt="eye"></img>
+        <img className="eye2 eye" src={eye} alt="eye"></img>
+        <img className="homerLogo" src={logo} alt="rema1000"></img>
       </div>
 
       <Box className="pagination-container">
