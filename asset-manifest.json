@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/rematrackerv2/static/css/main.f5425028.css",
-    "main.js": "/rematrackerv2/static/js/main.647e135a.js",
-    "static/media/rema1000logo.png": "/rematrackerv2/static/media/rema1000logo.4099f611a3f474047e2f.png",
+    "main.css": "/rematrackerv2/static/css/main.ab9a928f.css",
+    "main.js": "/rematrackerv2/static/js/main.e16d6ecc.js",
+    "static/media/HomerSimpson.png": "/rematrackerv2/static/media/HomerSimpson.3bd789699f7772535090.png",
     "static/media/remalogo.png": "/rematrackerv2/static/media/remalogo.96170000458655688279.png",
+    "static/media/eye.png": "/rematrackerv2/static/media/eye.dac475d697a8490efee0.png",
     "index.html": "/rematrackerv2/index.html",
-    "main.f5425028.css.map": "/rematrackerv2/static/css/main.f5425028.css.map",
-    "main.647e135a.js.map": "/rematrackerv2/static/js/main.647e135a.js.map"
+    "main.ab9a928f.css.map": "/rematrackerv2/static/css/main.ab9a928f.css.map",
+    "main.e16d6ecc.js.map": "/rematrackerv2/static/js/main.e16d6ecc.js.map"
   },
   "entrypoints": [
-    "static/css/main.f5425028.css",
-    "static/js/main.647e135a.js"
+    "static/css/main.ab9a928f.css",
+    "static/js/main.e16d6ecc.js"
   ]
 }
