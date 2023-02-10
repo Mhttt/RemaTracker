@@ -19,13 +19,25 @@
   color: white;
   margin-bottom: 10px;
   font-size: 50px;
+  align-items: center;
 }
+
 
 .headerMenu {
   display: flex;
   min-width: 700px;
   justify-content: space-between;
   margin-bottom: 30px;
+}
+
+@media screen and (max-width: 760px) {
+  .headerMenu a {
+    font-size: 15px;
+  }
+  .headerMenu{
+    justify-content: space-evenly;
+  }
+  
 }
 
 .headerLink {
@@ -43,6 +55,26 @@
   background-color: white;
   margin-bottom: 30px;
   margin-top: 15px;
+}
+
+@media screen and (max-width: 560px) {
+.title{
+  font-size: 30px;
+}
+
+.headerMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .headerMenu a {
+    margin-bottom: 10px;
+    font-size: 13px;
+  }
+  .search-field {
+    width: 250px;
+  }
 }
 
 .pagination-container {

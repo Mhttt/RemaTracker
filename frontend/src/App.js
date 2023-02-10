@@ -99,7 +99,7 @@ function App() {
         <Pagination
           className="pagination"
           size="large"
-          count={10}
+          count={18}
           color="primary"
           onChange={handleChange}
         ></Pagination>
