@@ -63,10 +63,11 @@
 }
 
 .avisvare {
+  font-weight: 500;
   color: white;
   background-color: #19619E;
   border-radius: 56px;
-  margin-top: 10px;
-  padding: 5px 10px 5px 10px;
+  margin-top: 25px;
+  padding: 7px 20px 7px 20px;
 }
 
