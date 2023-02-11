@@ -25,3 +25,11 @@ function angle(cx, cy, ex, ey) {
   const deg = (rad * 180) / Math.PI;
   return deg;
 }
+
+export function inDiscountCatalogue(labelArr) {
+	if (!labelArr === undefined && labelArr.includes('avisvare')) {
+		return true;
+	} else {
+		return false;
+	}
+}
