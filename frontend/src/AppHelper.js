@@ -27,9 +27,9 @@ function angle(cx, cy, ex, ey) {
 }
 
 export function inDiscountCatalogue(labelArr) {
-	if (!labelArr === undefined && labelArr.includes('avisvare')) {
+	if (labelArr !== undefined && labelArr.includes('avisvare')) {
 		return true;
 	} else {
-		return false;
+    return false;
 	}
 }

@@ -75,7 +75,6 @@ function App() {
       </Box>
       <Grid container spacing={4}>
         {shownProducts.map((product, index) => {
-          console.log(product)
           return (
 						<Grid key={index} item xs={12} sm={6} md={4} lg={3}>
 							<DiscountCard

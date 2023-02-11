@@ -6,6 +6,7 @@ import { getProductLink } from './DiscountHelpers';
 function DiscountCard(props) {
 	const productIsOnDiscount = props.productOldPrice - props.productPrice; //If bigger than 0 product is on discount
 	const productlink = getProductLink(props.productImage);
+  const inCatalogue = props.productLabel;
 
 	return (
 		<Card
@@ -33,6 +34,11 @@ function DiscountCard(props) {
 							Du kan nu sparer{' '}
 							{(props.productOldPrice - props.productPrice).toFixed(2)} kr!
 						</h5>
+					</Box>
+				) : inCatalogue ? (
+					<Box className="price-container-non">
+						<h1 className="discount">{props.productPrice} kr</h1>
+						<p className="avisvare">Avisvare</p>
 					</Box>
 				) : (
 					<Box className="price-container-non">
