@@ -23,3 +23,4 @@ export function getProductLink(productURL) {
 	const productLink = prefixLink + n;
 	return productLink;
 }
+

@@ -2,7 +2,7 @@ import './App.css';
 import logo from './public/remalogo.png';
 import homer from './public/HomerSimpson.png';
 import eye from './public/eye.png';
-import { calculateEyes } from './AppHelper';
+import { calculateEyes, inDiscountCatalogue } from './AppHelper';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import DiscountCard from './components/DiscountCard/DiscountCard';
@@ -41,6 +41,7 @@ function App() {
     calcPagination(undefined, value);
   };
 
+
   return (
     <div>
       <Box className="header">
@@ -74,18 +75,20 @@ function App() {
       </Box>
       <Grid container spacing={4}>
         {shownProducts.map((product, index) => {
+          console.log(product)
           return (
-            <Grid key={index} item xs={12} sm={6} md={4} lg={3}>
-              <DiscountCard
-                productImage={`${product.productImageUrl}/150.jpg`}
-                productName={product.productName}
-                productDescription={product.productUnderlineDescription}
-                productOldPrice={product.productOldPrice}
-                productPrice={product.productPrice}
-                productLogo={logo}
-              ></DiscountCard>
-            </Grid>
-          );
+						<Grid key={index} item xs={12} sm={6} md={4} lg={3}>
+							<DiscountCard
+								productImage={`${product.productImageUrl}/150.jpg`}
+								productName={product.productName}
+								productDescription={product.productUnderlineDescription}
+								productOldPrice={product.productOldPrice}
+								productPrice={product.productPrice}
+                productLabel={inDiscountCatalogue(product.productLabel)}
+								productLogo={logo}
+							></DiscountCard>
+						</Grid>
+					);
         })}
       </Grid>
       <div className="homer">

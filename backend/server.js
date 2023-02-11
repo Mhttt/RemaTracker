@@ -128,6 +128,7 @@ axios
 					productOnDiscount: results[i].hits[j].pricing.is_on_discount,
 					productFullDescription: results[i].hits[j].declaration,
 					productUnderlineDescription: results[i].hits[j].underline,
+          productLabel: results[i].hits[j].labels,
 					productImageUrl: imageUrlPrefix + results[i].hits[j].image_url,
 				});
 			}
