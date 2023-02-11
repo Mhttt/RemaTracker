@@ -43,71 +43,72 @@ function App() {
 
 
   return (
-    <div>
-      <Box className="header">
-        <h1 className="title">REMA 1000 TRACKER</h1>
-        <Box>
-          <InputBase
-            className="search-field"
-            placeholder="Søg i Rema1000s Sortiment"
-            onChange={(e) => {
-              const searchValue = e.target.value;
-              const filteredProducts = allProducts.filter((product) => {
-                return product.productName
-                  .toLowerCase()
-                  .includes(searchValue.toLowerCase());
-              });
-              calcPagination(filteredProducts, 1);
-            }}
-          ></InputBase>
-        </Box>
-        <Box className="headerMenu">
-          <a className="headerLink" href="/">
-            Min Indkøbsliste
-          </a>
-          <a className="headerLink" href="/">
-            Måltids Inspiration
-          </a>
-          <a className="headerLink" href="/">
-            Brug for hjælp
-          </a>
-        </Box>
-      </Box>
-      <Grid container spacing={4}>
-        {shownProducts.map((product, index) => {
-          return (
-						<Grid key={index} item xs={12} sm={6} md={4} lg={3}>
-							<DiscountCard
-								productImage={`${product.productImageUrl}/150.jpg`}
-								productName={product.productName}
-								productDescription={product.productUnderlineDescription}
-								productOldPrice={product.productOldPrice}
-								productPrice={product.productPrice}
-                productLabel={inDiscountCatalogue(product.productLabel)}
-								productLogo={logo}
-							></DiscountCard>
-						</Grid>
-					);
-        })}
-      </Grid>
-      <div className="homer">
-        <img src={homer} alt="homer" width={'100px'}></img>
-        <img className="eye1 eye" src={eye} alt="eye"></img>
-        <img className="eye2 eye" src={eye} alt="eye"></img>
-        <img className="homerLogo" src={logo} alt="rema1000"></img>
-      </div>
-
-      <Box className="pagination-container">
-        <Pagination
-          className="pagination"
-          size="large"
-          count={18}
-          color="primary"
-          onChange={handleChange}
-        ></Pagination>
-      </Box>
-    </div>
-  );
+		<div>
+			<Box className="header">
+				<h1 className="title">REMA 1000 TRACKER</h1>
+				<Box>
+					<InputBase
+						className="search-field"
+						placeholder="Søg i Rema1000s Sortiment"
+						onChange={(e) => {
+							const searchValue = e.target.value;
+							const filteredProducts = allProducts.filter((product) => {
+								return product.productName
+									.toLowerCase()
+									.includes(searchValue.toLowerCase());
+							});
+							calcPagination(filteredProducts, 1);
+						}}
+					></InputBase>
+				</Box>
+				<Box className="headerMenu">
+					<a className="headerLink" href="/">
+						Min Indkøbsliste
+					</a>
+					<a className="headerLink" href="/">
+						Måltids Inspiration
+					</a>
+					<a className="headerLink" href="/">
+						Brug for hjælp
+					</a>
+				</Box>
+			</Box>
+			<Box className='bottom-container'>
+				<Grid container spacing={4}>
+					{shownProducts.map((product, index) => {
+						return (
+							<Grid key={index} item xs={12} sm={6} md={4} lg={3}>
+								<DiscountCard
+									productImage={`${product.productImageUrl}/150.jpg`}
+									productName={product.productName}
+									productDescription={product.productUnderlineDescription}
+									productOldPrice={product.productOldPrice}
+									productPrice={product.productPrice}
+									productLabel={inDiscountCatalogue(product.productLabel)}
+									productLogo={logo}
+								></DiscountCard>
+							</Grid>
+						);
+					})}
+				</Grid>
+				<div className="homer">
+					<img src={homer} alt="homer" width={'100px'}></img>
+					<img className="eye1 eye" src={eye} alt="eye"></img>
+					<img className="eye2 eye" src={eye} alt="eye"></img>
+					<img className="homerLogo" src={logo} alt="rema1000"></img>
+				</div>
+				<Box className="pagination-container">
+					<Pagination
+						className="pagination"
+						size="large"
+						count={18}
+						color="primary"
+						onChange={handleChange}
+					></Pagination>
+				</Box>
+			</Box>
+		</div>
+	);
 }
 
 export default App;
