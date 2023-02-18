@@ -4,7 +4,7 @@ import './Header.css'
 function Header(props) {
   return (
 		<Box className="header">
-			<h1 className="title">REMA 1000 TRACKER</h1>
+			<a href="/" className="title">REMA 1000 TRACKER</a>
 			<Box>
 				<InputBase
 					className="search-field"
@@ -21,13 +21,11 @@ function Header(props) {
 				></InputBase>
 			</Box>
 			<Box className="headerMenu">
-				<a className="headerLink" href="/">
-					Min Indkøbsliste
-				</a>
-				<a className="headerLink" href="/">
+				<a className="headerLink" href="/shoppinglist">Min Indkøbsliste</a>
+				<a className="headerLink" href="/inspiration">
 					Måltids Inspiration
 				</a>
-				<Link to="/help">Brug for hjælp</Link>
+				<a className="headerLink" href="/help">Brug for hjælp</a>
 			</Box>
 		</Box>
 	);

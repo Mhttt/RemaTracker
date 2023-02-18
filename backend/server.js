@@ -110,7 +110,7 @@ axios
 				{
 					indexName: 'aws-prod-products',
 					params:
-						'query=&hitsPerPage=9999&facets=%5B%22labels%22%5D&facetFilters=%5B%22labels%3Aavisvare%22%2C%22department_id%3A190%22%5D&filters=',
+						'query=&hitsPerPage=9999&facets=%5B%22labels%22%5D&facetFilters=%5B%22labels%3Aavisvare%22%2C%22department_id%3A200%22%5D&filters=',
 				},
 			],
 		}
