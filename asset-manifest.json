@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/RemaTracker/static/css/main.8a2c990e.css",
-    "main.js": "/RemaTracker/static/js/main.0dc2383d.js",
-    "static/media/HomerSimpson.png": "/RemaTracker/static/media/HomerSimpson.3bd789699f7772535090.png",
-    "static/media/remalogo.png": "/RemaTracker/static/media/remalogo.96170000458655688279.png",
-    "static/media/eye.png": "/RemaTracker/static/media/eye.dac475d697a8490efee0.png",
-    "index.html": "/RemaTracker/index.html",
-    "main.8a2c990e.css.map": "/RemaTracker/static/css/main.8a2c990e.css.map",
-    "main.0dc2383d.js.map": "/RemaTracker/static/js/main.0dc2383d.js.map"
+    "main.css": "/rematracker/static/css/main.80f02373.css",
+    "main.js": "/rematracker/static/js/main.6b08e94e.js",
+    "static/media/HomerSimpson.png": "/rematracker/static/media/HomerSimpson.3bd789699f7772535090.png",
+    "static/media/remalogo.png": "/rematracker/static/media/remalogo.96170000458655688279.png",
+    "static/media/eye.png": "/rematracker/static/media/eye.dac475d697a8490efee0.png",
+    "index.html": "/rematracker/index.html",
+    "main.80f02373.css.map": "/rematracker/static/css/main.80f02373.css.map",
+    "main.6b08e94e.js.map": "/rematracker/static/js/main.6b08e94e.js.map"
   },
   "entrypoints": [
-    "static/css/main.8a2c990e.css",
-    "static/js/main.0dc2383d.js"
+    "static/css/main.80f02373.css",
+    "static/js/main.6b08e94e.js"
   ]
 }
