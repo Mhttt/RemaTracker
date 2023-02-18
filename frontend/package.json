@@ -52,7 +52,7 @@
 		"rimraf": false,
 		"readline": false
 	},
-	"homepage": "https://mhttt.github.io/rematracker",
+	"homepage": "https://mhttt.github.io/RemaTracker",
 	"devDependencies": {
 		"react-router-dom": "^6.8.1"
 	}
