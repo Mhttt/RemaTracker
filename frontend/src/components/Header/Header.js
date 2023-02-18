@@ -1,10 +1,10 @@
-import { Box, InputBase, Link } from "@mui/material";
+import { Box, InputBase} from "@mui/material";
 import './Header.css'
 
 function Header(props) {
   return (
 		<Box className="header">
-			<a href="/" className="title">REMA 1000 TRACKER</a>
+			<a href="/RemaTracker" className="title">REMA 1000 TRACKER</a>
 			<Box>
 				<InputBase
 					className="search-field"
