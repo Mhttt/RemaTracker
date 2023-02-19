@@ -27,6 +27,7 @@ function DiscountCard(props) {
 					props.addToList(props.productName.toLowerCase());
 				}}
 			>
+				<Box className="addTooltip">Tilføj til indkøbsliste</Box>
 				{props.productInList ? (
 					<Favorite sx={{ fill: 'red' }}></Favorite>
 				) : (
