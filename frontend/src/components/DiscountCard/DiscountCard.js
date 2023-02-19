@@ -2,6 +2,8 @@ import { Card } from '@mui/material';
 import { Box } from '@mui/system';
 import './DiscountCard.css';
 import { getProductLink } from './DiscountHelpers';
+import Favorite from '@mui/icons-material/Favorite';
+import FavoriteBorder from '@mui/icons-material/FavoriteBorder';
 
 function DiscountCard(props) {
 	const productIsOnDiscount = props.productOldPrice - props.productPrice; //If bigger than 0 product is on discount
@@ -10,13 +12,26 @@ function DiscountCard(props) {
 
 	return (
 		<Card
-			sx={{ borderRadius: '10px' }}
+			sx={{ borderRadius: '10px', position: 'relative' }}
 			className="card-container"
 			elevation={3}
-			onClick={() => {
+			onDoubleClick={() => {
 				window.open(productlink, '_blank');
 			}}
 		>
+			<button
+				className="addToList"
+				onClick={() => {
+					props.addToList(props.productName.toLowerCase());
+				}}
+			>
+				<Box className="addTooltip">Tilføj til indkøbsliste</Box>
+				{props.productInList ? (
+					<Favorite sx={{ fill: 'red' }}></Favorite>
+				) : (
+					<FavoriteBorder sx={{ fill: 'red' }}></FavoriteBorder>
+				)}
+			</button>
 			<Box className="container">
 				<img
 					className="productImage"

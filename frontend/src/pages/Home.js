@@ -2,22 +2,35 @@ import '../App.css';
 import logo from '../public/remalogo.png';
 import homer from '../public/HomerSimpson.png';
 import eye from '../public/eye.png';
-import Help from './Help';
 import DiscountCard from '../components/DiscountCard/DiscountCard';
 import Header from '../components/Header/Header';
-import { calculateEyes, inDiscountCatalogue } from '../AppHelper';
+import {
+	calculateEyes,
+	inDiscountCatalogue,
+	inShoppingList,
+} from '../AppHelper';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Grid, Pagination, Box, InputBase } from '@mui/material';
+import { Grid, Pagination, Box } from '@mui/material';
 
 function Home() {
 	const [allProducts, setAllProducts] = useState([]);
 	const [shownProducts, setShownProducts] = useState([]);
 	const [newsPerPage] = useState(24);
+	const [shoppingList, setShoppingList] = useState([]);
 
 	useEffect(() => {
 		fetchData();
 	}, []);
+
+	function addToList(item) { //Call back function to pass prop from DiscountCard to Home
+    if(shoppingList.includes(item)) {
+      setShoppingList(shoppingList.filter((e) => e !== item))
+    } else {
+      setShoppingList([...shoppingList, item]);
+    }
+    console.log(shoppingList)
+	}
 
 	function fetchData() {
 		try {
@@ -62,6 +75,11 @@ function Home() {
 									productPrice={product.productPrice}
 									productLabel={inDiscountCatalogue(product.productLabel)}
 									productLogo={logo}
+									productInList={inShoppingList(
+										product.productName,
+										shoppingList
+									)}
+									addToList={addToList}
 								></DiscountCard>
 							</Grid>
 						);
