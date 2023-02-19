@@ -11,6 +11,14 @@ body {
   background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(30,77,142,1) 0%, rgba(0,212,255,1) 100%);
   }
 
+@media screen and (max-width: 635px) {
+  body{
+    padding-top: 280px;
+  }
+}
+
+
+
 p {
 	margin: 0;
 }

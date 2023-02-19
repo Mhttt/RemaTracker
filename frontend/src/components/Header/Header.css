@@ -18,9 +18,10 @@
 .title {
 	color: white;
 	margin-bottom: 10px;
+	font-weight: 700;
 	font-size: 50px;
 	align-items: center;
-  text-decoration: none;
+	text-decoration: none;
 }
 
 .headerMenu {
@@ -56,7 +57,7 @@
 	margin-top: 15px;
 }
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 635px) {
 	.title {
 		font-size: 30px;
 	}

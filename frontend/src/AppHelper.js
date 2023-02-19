@@ -33,3 +33,11 @@ export function inDiscountCatalogue(labelArr) {
     return false;
 	}
 }
+
+export function inShoppingList(product, shoppingList) {
+    if (product !== undefined && shoppingList.includes(product.toLowerCase())) {
+			return true;
+		} else console.log(false);
+      return false
+
+}
