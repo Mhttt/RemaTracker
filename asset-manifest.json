@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/RemaTracker/static/css/main.80f02373.css",
-    "main.js": "/RemaTracker/static/js/main.06e31e34.js",
+    "main.css": "/RemaTracker/static/css/main.2ce895b2.css",
+    "main.js": "/RemaTracker/static/js/main.58e2c483.js",
     "static/media/HomerSimpson.png": "/RemaTracker/static/media/HomerSimpson.3bd789699f7772535090.png",
     "static/media/remalogo.png": "/RemaTracker/static/media/remalogo.96170000458655688279.png",
     "static/media/eye.png": "/RemaTracker/static/media/eye.dac475d697a8490efee0.png",
     "index.html": "/RemaTracker/index.html",
-    "main.80f02373.css.map": "/RemaTracker/static/css/main.80f02373.css.map",
-    "main.06e31e34.js.map": "/RemaTracker/static/js/main.06e31e34.js.map"
+    "main.2ce895b2.css.map": "/RemaTracker/static/css/main.2ce895b2.css.map",
+    "main.58e2c483.js.map": "/RemaTracker/static/js/main.58e2c483.js.map"
   },
   "entrypoints": [
-    "static/css/main.80f02373.css",
-    "static/js/main.06e31e34.js"
+    "static/css/main.2ce895b2.css",
+    "static/js/main.58e2c483.js"
   ]
 }
