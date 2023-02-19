@@ -1,9 +1,7 @@
-import { Button, Card } from '@mui/material';
+import { Card } from '@mui/material';
 import { Box } from '@mui/system';
 import './DiscountCard.css';
 import { getProductLink } from './DiscountHelpers';
-import heart1 from '../../public/heart1.png';
-import heart2 from '../../public/heart2.png';
 import Favorite from '@mui/icons-material/Favorite';
 import FavoriteBorder from '@mui/icons-material/FavoriteBorder';
 
